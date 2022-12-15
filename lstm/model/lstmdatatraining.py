@@ -72,19 +72,14 @@ def LSTMmodel(xTrain, yTrain, xTest, yTest, minMax):
 
     prediction = lstmModel.predict(xTest)
     prediction = minMax.inverse_transform(prediction)
-    #RMSE = np.sqrt(np.mean(prediction - yTest) ** 2)
-    # mse = np.square(np.subtract(yTest, prediction)).mean()
-    # rmse = math.sqrt(mse)
-    # print(rmse)
-    # print(RMSE)
+   
 
-    print('************************YTEST************************\n')
-    print(yTest)
-    print('************************PREDICTION************************\n')
-    print(prediction)
+    # print('************************YTEST************************\n')
+    # print(yTest)
+    # print('************************PREDICTION************************\n')
+    # print(prediction)
 
     return prediction
-    #, RMSE
 
 def visualizeOutput(stockData, prediction, trainingLen):
     data = stockData.filter(['Close'])
@@ -108,7 +103,7 @@ def main():
     # Manipulation based on the Date and closing data
 
     train = train[['Date', 'Close']]
-    # print(train.head().to_string())
+   
     # print(train.to_string())
 
     # formating data to ensure that the prices are floats and the date are in the proper format
@@ -116,21 +111,10 @@ def main():
     train = train.astype({"Close": float})
     train["Date"] = pd.to_datetime(train["Date"], format="%Y/%m/%d")
     # check data type
-    # print(train.dtypes)
+    print(train.dtypes)
 
     train.index = train["Date"]
-
-    # Data Visualization
-    # plot.plot(train["Close"], label= 'Close Price History')
-
-    # plot.figure(figsize=(15,8))
-    # plot.title('Stock Prices History')
-    # plot.plot(train['Close'])
-    # plot.xlabel('Date')
-    # plot.ylabel('Prices ($)')
-    # plot.show()
-
-    # plot.plot(train["Close"],label='Close Price history')
+ 
 
     # create trainingset
     xTrain, yTrain, xTest, yTest, minMax, trainingLen = trainingSet(train)
