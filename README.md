@@ -13,3 +13,9 @@ specifically, we wish to analyze stock information provided through the use of y
 which offers a threaded and pythonic way of downloaded market data from Yahoo Finance. The goal, 
 as mentioned, is to predict the short-term future value of stocks in order to determine investment 
 decisions.
+
+Instructions for running ARIMA Code:
+The best way to run the ARIMA code is to open the Jupyter notebook file (.ipynb) and run each section
+seperately. However for sake of convience, a standard Python file (.py) is provided as well. Please 
+note it is necessary to have all packaged listed at the top of the file installed in order to run the
+model.
