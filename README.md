@@ -15,10 +15,13 @@ as mentioned, is to predict the short-term future value of stocks in order to de
 decisions.
 
 Instructions for running ARIMA Code:
+The ARIMA code is located under the arima_model directory. 
+'CS5100_Project\arima_model'
+
 The best way to run the ARIMA code is to open the Jupyter notebook file (.ipynb) and run each section
-seperately. However for sake of convience, a standard Python file (.py) is provided as well. Please 
-note it is necessary to have all packaged listed at the top of the file installed in order to run the
-model.
+seperately. This way, you are able to follow along with the entire proces of creating an ARIMA model.
+However for sake of convience, a standard Python file (.py) is provided as well. Please note it is necessary 
+to have all packages listed at the top of the file installed in order to run themodel.
 
 
 Instructions for running LSTM code: 
